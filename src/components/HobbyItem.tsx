@@ -10,7 +10,7 @@ export function HobbyItem({ hobby }: HobbyItemProps) {
   return (
     <div className="flex items-center gap-2">
       <Icon className="h-4 w-4 text-text-secondary-light dark:text-text-secondary-dark" />
-      <span className="text-[10px] font-medium uppercase tracking-widest text-text-secondary-light dark:text-text-secondary-dark">
+      <span className="text-[13px] font-medium uppercase tracking-widest text-text-secondary-light dark:text-text-secondary-dark">
         {hobby.label}
       </span>
     </div>

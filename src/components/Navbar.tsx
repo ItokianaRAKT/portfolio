@@ -76,7 +76,7 @@ export function Navbar() {
       <div className="mx-auto flex h-12 max-w-[1440px] items-center justify-between px-6 md:px-11">
         <a
           href="#home"
-          className="text-[14px] font-semibold uppercase tracking-widest text-text-primary-light dark:text-text-primary-dark"
+          className="text-[16px] font-semibold uppercase tracking-widest text-text-primary-light dark:text-text-primary-dark"
         >
           R.I.T
         </a>
@@ -86,7 +86,7 @@ export function Navbar() {
             <a
               key={link.href}
               href={link.href}
-              className="relative py-1 text-[10px] font-medium uppercase tracking-widest text-text-secondary-light transition-colors hover:text-text-primary-light dark:text-text-secondary-dark dark:hover:text-text-primary-dark"
+              className="relative py-1 text-[12px] font-medium uppercase tracking-widest text-text-secondary-light transition-colors hover:text-text-primary-light dark:text-text-secondary-dark dark:hover:text-text-primary-dark"
             >
               {link.label}
               {activeSection === link.href.slice(1) && (
@@ -135,7 +135,7 @@ export function Navbar() {
                   key={link.href}
                   href={link.href}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="py-3 text-[11px] font-medium uppercase tracking-widest text-text-secondary-light transition-colors hover:text-text-primary-light dark:text-text-secondary-dark dark:hover:text-text-primary-dark"
+                  className="py-3 text-[13px] font-medium uppercase tracking-widest text-text-secondary-light transition-colors hover:text-text-primary-light dark:text-text-secondary-dark dark:hover:text-text-primary-dark"
                 >
                   {link.label}
                 </a>
