@@ -12,6 +12,12 @@ function App() {
   return (
     <ThemeProvider>
       <div className="min-h-screen bg-background-light text-text-primary-light dark:bg-background-dark dark:text-text-primary-dark">
+        <a
+          href="#home"
+          className="sr-only focus:not-sr-only focus:absolute focus:z-[100] focus:bg-primary-light focus:px-4 focus:py-2 focus:text-white"
+        >
+          Aller au contenu principal
+        </a>
         <Navbar />
         <main className="pt-12">
           <Hero />
