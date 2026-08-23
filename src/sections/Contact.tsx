@@ -1,11 +1,11 @@
-import { Linkedin, Github, Mail } from 'lucide-react'
+import { Globe, ExternalLink, Mail } from 'lucide-react'
 import { motion } from 'motion/react'
 import { SectionLabel } from '../components/SectionLabel'
 import { ContactForm } from '../components/ContactForm'
 
 const socialLinks = [
-  { icon: Linkedin, label: 'LINKEDIN', href: '#', value: 'linkedin.com/in/...' },
-  { icon: Github, label: 'GITHUB', href: '#', value: 'github.com/...' },
+  { icon: Globe, label: 'LINKEDIN', href: '#', value: 'linkedin.com/in/...' },
+  { icon: ExternalLink, label: 'GITHUB', href: '#', value: 'github.com/...' },
   { icon: Mail, label: 'EMAIL', href: '#', value: '...' },
 ]
 
