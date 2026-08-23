@@ -1,7 +1,6 @@
 import { motion } from 'motion/react'
 import { SectionLabel } from '../components/SectionLabel'
 import { Button } from '../components/Button'
-import { ProjectMockup } from '../components/ProjectMockup'
 
 export function About() {
   return (
@@ -9,7 +8,7 @@ export function About() {
       <div className="mx-auto max-w-[1440px] px-6 py-16 md:px-11 md:py-24">
         <SectionLabel number="02" label="À PROPOS" />
 
-        <div className="grid gap-12 md:grid-cols-[1fr_1.5fr] md:gap-16">
+        <div className="max-w-2xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -17,15 +16,13 @@ export function About() {
             transition={{ duration: 0.6 }}
           >
             <p className="mb-8 text-[24px] leading-relaxed text-text-primary-light dark:text-text-primary-dark md:text-[28px]">
-              Je ne me contente pas
+              Comprendre pourquoi ça fonctionne
               <br />
-              de savoir quelque chose
+              afin de développer des compétences solides,
               <br />
-              fonctionne.
+              construire des solutions fiables
               <br />
-              Je veux comprendre
-              <br />
-              pourquoi.
+              et relever des défis plus complexes.
             </p>
 
             <div className="mb-8 space-y-6">
@@ -58,16 +55,6 @@ export function About() {
             </div>
 
             <Button href="#projects">Explorer le projet</Button>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: '-100px' }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="flex items-center justify-center"
-          >
-            <ProjectMockup />
           </motion.div>
         </div>
       </div>
