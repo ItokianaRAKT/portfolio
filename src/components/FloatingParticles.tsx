@@ -17,19 +17,19 @@ interface Particle {
 
 function generateParticles(isDark: boolean): Particle[] {
   const colors = isDark
-    ? ['#8B5CF6', '#91B83F', '#8BAF36', '#9A9D9C']
-    : ['#6D3DF5', '#7C5CFF', '#B8A9F5', '#E2E2E0']
+    ? ['#8B5CF6', '#A78BFA', '#818CF8', '#6366F1', '#7C5CFF', '#C4B5FD']
+    : ['#6D3DF5', '#7C5CFF', '#818CF8', '#6366F1', '#8B5CF6', '#A78BFA']
 
-  return Array.from({ length: 40 }, (_, i) => ({
+  return Array.from({ length: 60 }, (_, i) => ({
     id: i,
     x: Math.random() * 100,
     y: Math.random() * 100,
-    size: Math.random() * 3 + 1,
-    duration: Math.random() * 12 + 8,
+    size: Math.random() * 6 + 2,
+    duration: Math.random() * 9 + 5,
     delay: Math.random() * 5,
-    xRange: (Math.random() - 0.5) * 60,
-    yRange: (Math.random() - 0.5) * 60,
-    opacity: Math.random() * 0.4 + 0.1,
+    xRange: (Math.random() - 0.5) * 80,
+    yRange: (Math.random() - 0.5) * 80,
+    opacity: Math.random() * 0.5 + 0.15,
     color: colors[Math.floor(Math.random() * colors.length)],
   }))
 }
@@ -61,7 +61,7 @@ export function FloatingParticles() {
             width: particle.size,
             height: particle.size,
             backgroundColor: particle.color,
-            filter: `blur(${particle.size > 2 ? 1 : 0}px)`,
+            filter: `blur(${particle.size > 6 ? 2 : particle.size > 4 ? 1.5 : 0}px)`,
           }}
           animate={
             prefersReducedMotion
