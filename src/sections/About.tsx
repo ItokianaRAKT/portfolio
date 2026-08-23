@@ -16,7 +16,7 @@ export function About() {
             viewport={{ once: true, margin: '-100px' }}
             transition={{ duration: 0.6 }}
           >
-            <p className="mb-8 text-[18px] leading-relaxed text-text-primary-light dark:text-text-primary-dark md:text-[20px]">
+            <p className="mb-8 text-[24px] leading-relaxed text-text-primary-light dark:text-text-primary-dark md:text-[28px]">
               Je ne me contente pas
               <br />
               de savoir quelque chose
@@ -30,28 +30,28 @@ export function About() {
 
             <div className="mb-8 space-y-6">
               <div>
-                <p className="mb-1 text-[9px] font-semibold uppercase tracking-widest text-text-primary-light dark:text-text-primary-dark">
+                <p className="mb-1 text-[12px] font-semibold uppercase tracking-widest text-text-primary-light dark:text-text-primary-dark">
                   Rôle
                 </p>
-                <p className="text-[12px] text-text-secondary-light dark:text-text-secondary-dark">
+                <p className="text-[15px] text-text-secondary-light dark:text-text-secondary-dark">
                   Développement full-stack
                 </p>
               </div>
 
               <div>
-                <p className="mb-1 text-[9px] font-semibold uppercase tracking-widest text-text-primary-light dark:text-text-primary-dark">
+                <p className="mb-1 text-[12px] font-semibold uppercase tracking-widest text-text-primary-light dark:text-text-primary-dark">
                   Stack
                 </p>
-                <p className="text-[12px] text-text-secondary-light dark:text-text-secondary-dark">
+                <p className="text-[15px] text-text-secondary-light dark:text-text-secondary-dark">
                   React · TypeScript · FastAPI · Django · PostgreSQL
                 </p>
               </div>
 
               <div>
-                <p className="mb-1 text-[9px] font-semibold uppercase tracking-widest text-text-primary-light dark:text-text-primary-dark">
+                <p className="mb-1 text-[12px] font-semibold uppercase tracking-widest text-text-primary-light dark:text-text-primary-dark">
                   Statut
                 </p>
-                <p className="text-[12px] text-text-secondary-light dark:text-text-secondary-dark">
+                <p className="text-[15px] text-text-secondary-light dark:text-text-secondary-dark">
                   En développement
                 </p>
               </div>
