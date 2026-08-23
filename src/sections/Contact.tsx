@@ -23,9 +23,7 @@ export function Contact() {
             transition={{ duration: 0.5 }}
           >
             <h2 className="mb-4 text-[28px] font-medium uppercase tracking-tight text-text-primary-light dark:text-text-primary-dark md:text-[34px]">
-              Mettons-nous
-              <br />
-              au travail.
+              Contactez-moi.
             </h2>
             <p className="max-w-[200px] text-[15px] leading-relaxed text-text-secondary-light dark:text-text-secondary-dark">
               Un projet, une opportunité,
@@ -35,7 +33,7 @@ export function Contact() {
               une discussion ?
               <br />
               <br />
-              Conseillons-nous.
+              Écrivons-nous.
             </p>
           </motion.div>
 
