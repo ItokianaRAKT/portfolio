@@ -17,20 +17,8 @@ export function MainProject() {
             transition={{ duration: 0.6 }}
           >
             <p className="mb-8 text-[24px] leading-relaxed text-text-primary-light dark:text-text-primary-dark md:text-[28px]">
-              Comprendre pourquoi ça fonctionne
-              <br />
-              afin de développer des compétences solides,
-              <br />
-              construire des solutions fiables
-              <br />
-              et relever des défis plus complexes.
+              Tsinjo
             </p>
-
-            <div className="mb-4">
-              <h3 className="text-[18px] font-medium text-text-primary-light dark:text-text-primary-dark">
-                Tsinjo
-              </h3>
-            </div>
 
             <div className="mb-8 space-y-6">
               <div>
