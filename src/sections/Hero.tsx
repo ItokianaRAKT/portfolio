@@ -35,7 +35,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
-            className="max-w-[280px] text-[12px] leading-relaxed text-text-secondary-light dark:text-text-secondary-dark"
+            className="max-w-[280px] text-[16px] leading-relaxed text-text-secondary-light dark:text-text-secondary-dark"
           >
             Étudiante en informatique.
             <br />
@@ -48,7 +48,7 @@ export function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.6 }}
-            className="mt-5 flex items-center gap-5 text-[11px] text-text-secondary-light dark:text-text-secondary-dark"
+            className="mt-5 flex items-center gap-5 text-[14px] text-text-secondary-light dark:text-text-secondary-dark"
           >
             <span className="flex items-center gap-1.5">
               <MapPin className="h-3 w-3" />
