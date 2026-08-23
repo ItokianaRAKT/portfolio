@@ -5,6 +5,7 @@ import { About } from './sections/About'
 import { Projects } from './sections/Projects'
 import { Exploration } from './sections/Exploration'
 import { BeyondCode } from './sections/BeyondCode'
+import { Contact } from './sections/Contact'
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Projects />
           <Exploration />
           <BeyondCode />
+          <Contact />
         </main>
       </div>
     </ThemeProvider>
