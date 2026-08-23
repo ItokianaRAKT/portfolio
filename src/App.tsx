@@ -2,6 +2,7 @@ import { ThemeProvider } from './context/ThemeContext'
 import { Navbar } from './components/Navbar'
 import { Hero } from './sections/Hero'
 import { About } from './sections/About'
+import { Projects } from './sections/Projects'
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <main className="pt-12">
           <Hero />
           <About />
+          <Projects />
         </main>
       </div>
     </ThemeProvider>
