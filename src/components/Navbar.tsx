@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { Menu, X } from 'lucide-react'
 import { motion, AnimatePresence } from 'motion/react'
 import { ThemeToggle } from './ThemeToggle'
@@ -11,32 +11,54 @@ const NAV_LINKS = [
   { href: '#contact', label: 'CONTACT' },
 ] as const
 
+const SECTION_IDS = NAV_LINKS.map(link => link.href.slice(1))
+
 export function Navbar() {
   const [activeSection, setActiveSection] = useState('home')
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-
-  const handleScroll = useCallback(() => {
-    const sections = NAV_LINKS.map(link => link.href.slice(1))
-    let current = 'home'
-
-    for (const sectionId of sections) {
-      const element = document.getElementById(sectionId)
-      if (element) {
-        const rect = element.getBoundingClientRect()
-        if (rect.top <= 100) {
-          current = sectionId
-        }
-      }
-    }
-
-    setActiveSection(current)
-  }, [])
+  const observerRef = useRef<Map<string, IntersectionObserverEntry>>(new Map())
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll, { passive: true })
-    handleScroll()
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [handleScroll])
+    const headerHeight = 48
+
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            observerRef.current.set(entry.target.id, entry)
+          } else {
+            observerRef.current.delete(entry.target.id)
+          }
+        })
+
+        const visible = Array.from(observerRef.current.values())
+          .filter(e => e.boundingClientRect.top <= headerHeight + 10)
+          .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top)
+
+        if (visible.length > 0) {
+          setActiveSection(visible[visible.length - 1].target.id)
+        } else if (visible.length === 0 && observerRef.current.size > 0) {
+          const above = Array.from(observerRef.current.values())
+            .filter(e => e.boundingClientRect.top <= headerHeight + 10)
+            .sort((a, b) => b.boundingClientRect.top - a.boundingClientRect.top)
+          if (above.length > 0) {
+            setActiveSection(above[0].target.id)
+          }
+        }
+      },
+      {
+        rootMargin: `-${headerHeight}px 0px -40% 0px`,
+        threshold: [0, 0.1, 0.5],
+      }
+    )
+
+    SECTION_IDS.forEach(id => {
+      const el = document.getElementById(id)
+      if (el) observer.observe(el)
+    })
+
+    return () => observer.disconnect()
+  }, [])
 
   useEffect(() => {
     if (isMobileMenuOpen) {
