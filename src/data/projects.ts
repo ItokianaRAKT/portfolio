@@ -30,11 +30,11 @@ export const projects: Project[] = [
     stack: ['Spring Boot', 'PostgreSQL'],
   },
   {
-    id: 'infera-lab',
+    id: 'over-the-wire',
     number: '05',
-    title: 'INFERA LAB',
-    description: 'Laboratoire réseau et sécurité avec pfSense.',
-    stack: ['pfSense', 'Linux', 'VMware'],
+    title: 'OVER THE WIRE — BANDIT',
+    description: 'Write-up des challenges Linux et sécurité de OverTheWire.',
+    stack: ['Linux', 'Bash', 'SSH'],
   },
   {
     id: 'others',
