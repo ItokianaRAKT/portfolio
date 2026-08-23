@@ -9,7 +9,7 @@ export function BeyondCode() {
       <div className="mx-auto max-w-[1440px] px-6 py-16 md:px-11 md:py-24">
         <SectionLabel number="06" label="EN DEHORS DU CODE" />
 
-        <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-6">
+        <div className="mt-8 grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-5">
           {hobbies.map((hobby, index) => (
             <motion.div
               key={hobby.id}
