@@ -14,8 +14,17 @@ export function About() {
             viewport={{ once: true, margin: '-100px' }}
             transition={{ duration: 0.6 }}
           >
-            <p className="text-[24px] leading-relaxed text-text-primary-light dark:text-text-primary-dark md:text-[28px]">
+            <p className="mb-4 text-[24px] leading-relaxed text-text-primary-light dark:text-text-primary-dark md:text-[28px]">
               Comprendre avant de construire.
+            </p>
+            <p className="text-[15px] leading-relaxed text-text-secondary-light dark:text-text-secondary-dark">
+              Comprendre pourquoi ça fonctionne
+              <br />
+              afin de développer des compétences solides,
+              <br />
+              construire des solutions fiables
+              <br />
+              et relever des défis plus complexes.
             </p>
           </motion.div>
         </div>
