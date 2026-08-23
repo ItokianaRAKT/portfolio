@@ -19,7 +19,7 @@ export function Button({
   className = '',
 }: ButtonProps) {
   const baseStyles =
-    'group inline-flex items-center gap-2 transition-all duration-200 text-[13px] uppercase tracking-wide'
+    'group inline-flex items-center gap-2 transition-all duration-200 text-[15px] uppercase tracking-wide'
 
   const variantStyles =
     variant === 'outline'
