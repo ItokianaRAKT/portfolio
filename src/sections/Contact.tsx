@@ -4,9 +4,9 @@ import { SectionLabel } from '../components/SectionLabel'
 import { ContactForm } from '../components/ContactForm'
 
 const socialLinks = [
-  { icon: Globe, label: 'LINKEDIN', href: '#', value: 'linkedin.com/in/...' },
-  { icon: ExternalLink, label: 'GITHUB', href: '#', value: 'github.com/...' },
-  { icon: Mail, label: 'EMAIL', href: '#', value: '...' },
+  { icon: Globe, label: 'LINKEDIN', href: 'https://www.linkedin.com/in/itokiana-rakotoarivelo-281726374', value: 'linkedin.com/in/itokiana-rakotoarivelo' },
+  { icon: ExternalLink, label: 'GITHUB', href: 'https://github.com/ItokianaRAKT', value: 'github.com/ItokianaRAKT' },
+  { icon: Mail, label: 'EMAIL', href: 'mailto:itokianarakt@gmail.com', value: 'itokianarakt@gmail.com' },
 ]
 
 export function Contact() {
@@ -23,9 +23,9 @@ export function Contact() {
             transition={{ duration: 0.5 }}
           >
             <h2 className="mb-4 text-[28px] font-medium uppercase tracking-tight text-text-primary-light dark:text-text-primary-dark md:text-[34px]">
-              Let&apos;s build
+              Mettons-nous
               <br />
-              something.
+              au travail.
             </h2>
             <p className="max-w-[200px] text-[15px] leading-relaxed text-text-secondary-light dark:text-text-secondary-dark">
               Un projet, une opportunité,
@@ -35,7 +35,7 @@ export function Contact() {
               une discussion ?
               <br />
               <br />
-              Écrivons-nous.
+              Conseillons-nous.
             </p>
           </motion.div>
 

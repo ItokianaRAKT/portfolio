@@ -14,7 +14,7 @@ export function ExplorationCard({ technology }: ExplorationCardProps) {
       transition={{ duration: 0.2 }}
       className="group border-t border-border-light py-6 transition-colors duration-200 hover:border-primary-light dark:border-border-dark dark:hover:border-primary-dark"
     >
-      <Icon className="mb-4 h-5 w-5 text-primary-light dark:text-green-dark" />
+      <Icon className="mb-4 h-5 w-5 text-primary-light dark:text-primary-dark" />
 
       <h3 className="mb-2 text-[14px] font-semibold uppercase tracking-widest text-text-primary-light dark:text-text-primary-dark">
         {technology.title}
@@ -30,7 +30,7 @@ export function ExplorationCard({ technology }: ExplorationCardProps) {
             key={item}
             className="flex items-center gap-1.5 text-[13px] text-text-secondary-light dark:text-text-secondary-dark"
           >
-            <span className="text-primary-light dark:text-green-dark">→</span>
+            <span className="text-primary-light dark:text-primary-dark">→</span>
             {item}
           </li>
         ))}
