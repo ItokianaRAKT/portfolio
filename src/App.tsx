@@ -4,6 +4,7 @@ import { Hero } from './sections/Hero'
 import { About } from './sections/About'
 import { Projects } from './sections/Projects'
 import { Exploration } from './sections/Exploration'
+import { BeyondCode } from './sections/BeyondCode'
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <About />
           <Projects />
           <Exploration />
+          <BeyondCode />
         </main>
       </div>
     </ThemeProvider>
