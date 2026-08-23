@@ -26,8 +26,8 @@ export const projects: Project[] = [
     id: 'exam-hub',
     number: '04',
     title: 'EXAM HUB',
-    description: "Plateforme d'entraînements et de révisions.",
-    stack: ['Spring Boot', 'PostgreSQL'],
+    description: "Plateforme d'examens en ligne par QCM.",
+    stack: ['React', 'TypeScript', 'Express', 'PostgreSQL'],
   },
   {
     id: 'over-the-wire',
