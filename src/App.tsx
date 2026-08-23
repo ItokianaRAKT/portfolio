@@ -6,6 +6,7 @@ import { Projects } from './sections/Projects'
 import { Exploration } from './sections/Exploration'
 import { BeyondCode } from './sections/BeyondCode'
 import { Contact } from './sections/Contact'
+import { Footer } from './components/Footer'
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <BeyondCode />
           <Contact />
         </main>
+        <Footer />
       </div>
     </ThemeProvider>
   )
