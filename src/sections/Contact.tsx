@@ -1,11 +1,11 @@
-import { Globe, ExternalLink, Mail } from 'lucide-react'
+import { Globe, GitBranch, Mail } from 'lucide-react'
 import { motion } from 'motion/react'
 import { SectionLabel } from '../components/SectionLabel'
 import { ContactForm } from '../components/ContactForm'
 
 const socialLinks = [
   { icon: Globe, label: 'LINKEDIN', href: 'https://www.linkedin.com/in/itokiana-rakotoarivelo-281726374', value: 'linkedin.com/in/itokiana-rakotoarivelo' },
-  { icon: ExternalLink, label: 'GITHUB', href: 'https://github.com/ItokianaRAKT', value: 'github.com/ItokianaRAKT' },
+  { icon: GitBranch, label: 'GITHUB', href: 'https://github.com/ItokianaRAKT', value: 'github.com/ItokianaRAKT' },
   { icon: Mail, label: 'EMAIL', href: 'mailto:itokianarakt@gmail.com', value: 'itokianarakt@gmail.com' },
 ]
 
