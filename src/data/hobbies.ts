@@ -1,4 +1,4 @@
-import { PenLine, Music, Pencil, Guitar, Gamepad2, Cat } from 'lucide-react'
+import { BookOpen, Music, Pencil, Guitar, Cat } from 'lucide-react'
 import type { ComponentType } from 'react'
 
 export interface Hobby {
@@ -8,10 +8,9 @@ export interface Hobby {
 }
 
 export const hobbies: Hobby[] = [
-  { id: 'writing', label: 'ÉCRITURE', icon: PenLine },
+  { id: 'reading', label: 'LECTURE', icon: BookOpen },
   { id: 'music', label: 'MUSIQUE', icon: Music },
   { id: 'drawing', label: 'DESSIN', icon: Pencil },
   { id: 'guitar', label: 'GUITARE', icon: Guitar },
-  { id: 'gaming', label: 'JEUX VIDÉO', icon: Gamepad2 },
   { id: 'cats', label: 'CHATS', icon: Cat },
 ]
