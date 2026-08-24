@@ -13,14 +13,14 @@ export const projects: Project[] = [
     number: '02',
     title: 'CAPSULE',
     description: 'Capsules temporelles numériques.',
-    stack: ['React', 'TypeScript'],
+    stack: ['React', 'TypeScript', 'Spring Boot', 'PostgreSQL'],
   },
   {
     id: 'sosmada',
     number: '03',
     title: 'SOSMADA',
     description: "Informations d'urgence accessibles hors ligne.",
-    stack: ['Android', 'Java', 'SQLite'],
+    stack: ['React Native', 'TypeScript', 'Expo', 'SQLite'],
   },
   {
     id: 'exam-hub',
@@ -32,8 +32,8 @@ export const projects: Project[] = [
   {
     id: 'over-the-wire',
     number: '05',
-    title: 'OVER THE WIRE — BANDIT',
-    description: 'Write-up des challenges Linux et sécurité de OverTheWire.',
+    title: 'OVER THE WIRE',
+    description: 'Write-up des challenges Linux et sécurité des niveaux Bandit.',
     stack: ['Linux', 'Bash', 'SSH'],
   },
   {
