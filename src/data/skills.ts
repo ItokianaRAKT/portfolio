@@ -37,7 +37,7 @@ export const skills: Skill[] = [
     id: 'outils',
     title: 'OUTILS',
     icon: Wrench,
-    items: ['Git', 'GitHub', 'VS Code', 'IntelliJ IDEA', 'Postman'],
+    items: ['Git', 'GitHub', 'IntelliJ IDEA', 'Zed', 'Postman'],
   },
   {
     id: 'competences',

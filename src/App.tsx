@@ -6,7 +6,6 @@ import { MainProject } from './sections/MainProject'
 import { Projects } from './sections/Projects'
 import { Skills } from './sections/Skills'
 import { Exploration } from './sections/Exploration'
-import { BeyondCode } from './sections/BeyondCode'
 import { Contact } from './sections/Contact'
 import { Footer } from './components/Footer'
 
@@ -28,7 +27,6 @@ function App() {
           <Projects />
           <Skills />
           <Exploration />
-          <BeyondCode />
           <Contact />
         </main>
         <Footer />
