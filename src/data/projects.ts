@@ -5,6 +5,7 @@ export interface Project {
   description: string
   stack: string[]
   href?: string
+  image?: string
 }
 
 export const projects: Project[] = [
@@ -14,6 +15,7 @@ export const projects: Project[] = [
     title: 'CAPSULE',
     description: 'Capsules temporelles numériques.',
     stack: ['React', 'TypeScript', 'Spring Boot', 'PostgreSQL'],
+    image: '/capsule.png',
   },
   {
     id: 'sosmada',
