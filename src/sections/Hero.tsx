@@ -9,7 +9,7 @@ export function Hero() {
     <section id="home" className="relative flex min-h-[calc(100vh-48px)] items-center overflow-hidden">
       <FloatingParticles />
 
-      <div className="relative z-10 mx-auto w-full max-w-[1440px] px-6 md:px-11">
+      <div className="relative z-10 mx-auto w-full max-w-360 px-6 md:px-11">
         <div className="max-w-2xl">
           <SectionLabel number="01" label="INTRODUCTION" />
 
@@ -28,20 +28,20 @@ export function Hero() {
             initial={{ opacity: 0, scaleX: 0 }}
             animate={{ opacity: 1, scaleX: 1 }}
             transition={{ duration: 0.4, delay: 0.3 }}
-            className="my-5 h-[2px] w-7 origin-left bg-primary-light dark:bg-primary-dark"
+            className="my-5 h-0.5 w-7 origin-left bg-primary-light dark:bg-primary-dark"
           />
 
           <motion.p
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
-            className="max-w-[280px] text-[16px] leading-relaxed text-text-secondary-light dark:text-text-secondary-dark"
+            className="max-w-70 text-[16px] leading-relaxed text-text-secondary-light dark:text-text-secondary-dark"
           >
-            Étudiante en informatique.
+            Étudiante en informatique,
             <br />
-            Je construis des solutions pour comprendre
+            Je cherche a mieux comprendre
             <br />
-            comment les choses fonctionnent.
+            les systèmes avant de les mettre en place.
           </motion.p>
 
           <motion.div

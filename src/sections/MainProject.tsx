@@ -6,7 +6,7 @@ import { ProjectMockup } from '../components/ProjectMockup'
 export function MainProject() {
   return (
     <section className="border-t border-border-light dark:border-border-dark">
-      <div className="mx-auto max-w-[1440px] px-6 py-16 md:px-11 md:py-24">
+      <div className="mx-auto max-w-360 px-6 py-16 md:px-11 md:py-24">
         <SectionLabel number="03" label="PROJET PRINCIPAL" />
 
         <div className="grid gap-12 md:grid-cols-[1fr_1.5fr] md:gap-16">
@@ -17,16 +17,29 @@ export function MainProject() {
             transition={{ duration: 0.6 }}
           >
             <p className="mb-8 text-[24px] leading-relaxed text-text-primary-light dark:text-text-primary-dark md:text-[28px]">
-              Tsinjo
+              TSINJO
+            </p>
+
+            <p className="mb-6 text-[15px] leading-relaxed text-text-secondary-light dark:text-text-secondary-dark">
+              Plateforme locale visant à mettre en relation les dons alimentaires et les personnes qui en ont besoin.
             </p>
 
             <div className="mb-8 space-y-6">
               <div>
                 <p className="mb-1 text-[12px] font-semibold uppercase tracking-widest text-text-primary-light dark:text-text-primary-dark">
+                  Problème
+                </p>
+                <p className="text-[15px] text-text-secondary-light dark:text-text-secondary-dark">
+                  Des aliments encore consommables sont jetés tous les jours alors que des personnes ou structures locales pourraient en avoir besoin. Les dons restent difficiles à identifier et à mettre en relation avec les bénéficiaires.
+                </p>
+              </div>
+
+              <div>
+                <p className="mb-1 text-[12px] font-semibold uppercase tracking-widest text-text-primary-light dark:text-text-primary-dark">
                   Rôle
                 </p>
                 <p className="text-[15px] text-text-secondary-light dark:text-text-secondary-dark">
-                  Développeur fullstack
+                  Développeuse fullstack
                 </p>
               </div>
 
