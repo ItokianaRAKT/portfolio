@@ -32,8 +32,8 @@ export const projects: Project[] = [
   {
     id: 'over-the-wire',
     number: '05',
-    title: 'OVER THE WIRE — BANDIT',
-    description: 'Write-up des challenges Linux et sécurité de OverTheWire.',
+    title: 'OVER THE WIRE',
+    description: 'Write-up des challenges Linux et sécurité des niveaux Bandit.',
     stack: ['Linux', 'Bash', 'SSH'],
   },
   {
