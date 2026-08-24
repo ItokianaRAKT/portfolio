@@ -4,6 +4,7 @@ import { Hero } from './sections/Hero'
 import { About } from './sections/About'
 import { MainProject } from './sections/MainProject'
 import { Projects } from './sections/Projects'
+import { Skills } from './sections/Skills'
 import { Exploration } from './sections/Exploration'
 import { BeyondCode } from './sections/BeyondCode'
 import { Contact } from './sections/Contact'
@@ -25,6 +26,7 @@ function App() {
           <About />
           <MainProject />
           <Projects />
+          <Skills />
           <Exploration />
           <BeyondCode />
           <Contact />
