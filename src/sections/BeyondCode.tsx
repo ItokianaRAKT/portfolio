@@ -7,7 +7,7 @@ export function BeyondCode() {
   return (
     <section className="border-t border-border-light dark:border-border-dark">
       <div className="mx-auto max-w-[1440px] px-6 py-16 md:px-11 md:py-24">
-        <SectionLabel number="06" label="EN DEHORS DU CODE" />
+        <SectionLabel number="07" label="EN DEHORS DU CODE" />
 
         <div className="mt-8 grid grid-cols-2 justify-center gap-6 sm:grid-cols-3 lg:grid-cols-5">
           {hobbies.map((hobby, index) => (
