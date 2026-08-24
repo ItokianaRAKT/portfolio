@@ -13,7 +13,7 @@ export const projects: Project[] = [
     number: '02',
     title: 'CAPSULE',
     description: 'Capsules temporelles numériques.',
-    stack: ['React', 'TypeScript', 'PostgreSQL', 'Spring Boot'],
+    stack: ['React', 'TypeScript', 'Spring Boot', 'PostgreSQL'],
   },
   {
     id: 'sosmada',
