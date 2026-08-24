@@ -23,16 +23,29 @@ export function ProjectCard({ project }: ProjectCardProps) {
     >
       <div className="relative aspect-[16/10] overflow-hidden bg-surface-light dark:bg-surface-dark">
         <svg viewBox="0 0 320 200" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-full w-full">
+          <defs>
+            {project.image && (
+              <clipPath id={`clip-card-${project.id}`}>
+                <rect x="60" y="30" width="200" height="110" rx="3" />
+              </clipPath>
+            )}
+          </defs>
           <rect width="320" height="200" fill={bgColor} />
           <rect x="60" y="20" width="200" height="120" rx="6" fill={screenColor} stroke={borderColor} strokeWidth="1" />
           <rect x="60" y="20" width="200" height="10" rx="6" fill={bgColor} />
           <circle cx="160" cy="25" r="2" fill={borderColor} />
-          <rect x="75" y="40" width="80" height="6" rx="2" fill={accentColor} opacity="0.8" />
-          <rect x="75" y="52" width="50" height="4" rx="1" fill={borderColor} opacity="0.5" />
-          <rect x="75" y="64" width="170" height="3" rx="1" fill={borderColor} opacity="0.3" />
-          <rect x="75" y="72" width="170" height="3" rx="1" fill={borderColor} opacity="0.3" />
-          <rect x="75" y="84" width="50" height="14" rx="3" fill={accentColor} opacity="0.9" />
-          <rect x="135" y="84" width="50" height="14" rx="3" fill={borderColor} opacity="0.3" />
+          {project.image ? (
+            <image href={project.image} x="60" y="30" width="200" height="110" clipPath={`url(#clip-card-${project.id})`} preserveAspectRatio="xMidYMid slice" />
+          ) : (
+            <>
+              <rect x="75" y="40" width="80" height="6" rx="2" fill={accentColor} opacity="0.8" />
+              <rect x="75" y="52" width="50" height="4" rx="1" fill={borderColor} opacity="0.5" />
+              <rect x="75" y="64" width="170" height="3" rx="1" fill={borderColor} opacity="0.3" />
+              <rect x="75" y="72" width="170" height="3" rx="1" fill={borderColor} opacity="0.3" />
+              <rect x="75" y="84" width="50" height="14" rx="3" fill={accentColor} opacity="0.9" />
+              <rect x="135" y="84" width="50" height="14" rx="3" fill={borderColor} opacity="0.3" />
+            </>
+          )}
           <rect x="40" y="140" width="240" height="8" rx="4" fill={bgColor} stroke={borderColor} strokeWidth="1" />
           <rect x="145" y="143" width="30" height="2" rx="1" fill={borderColor} opacity="0.5" />
           <rect x="90" y="160" width="140" height="20" rx="4" fill={screenColor} stroke={borderColor} strokeWidth="0.5" />
