@@ -4,6 +4,7 @@ import { Hero } from './sections/Hero'
 import { About } from './sections/About'
 import { MainProject } from './sections/MainProject'
 import { Projects } from './sections/Projects'
+import { Skills } from './sections/Skills'
 import { Exploration } from './sections/Exploration'
 import { BeyondCode } from './sections/BeyondCode'
 import { Contact } from './sections/Contact'
@@ -15,7 +16,7 @@ function App() {
       <div className="min-h-screen bg-background-light text-text-primary-light dark:bg-background-dark dark:text-text-primary-dark">
         <a
           href="#home"
-          className="sr-only focus:not-sr-only focus:absolute focus:z-[100] focus:bg-primary-light focus:px-4 focus:py-2 focus:text-white"
+          className="sr-only focus:not-sr-only focus:absolute focus-100 focus:bg-primary-light focus:px-4 focus:py-2 focus:text-white"
         >
           Aller au contenu principal
         </a>
@@ -25,6 +26,7 @@ function App() {
           <About />
           <MainProject />
           <Projects />
+          <Skills />
           <Exploration />
           <BeyondCode />
           <Contact />
