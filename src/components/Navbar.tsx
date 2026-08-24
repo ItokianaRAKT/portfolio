@@ -32,24 +32,16 @@ export function Navbar() {
         })
 
         const sections = Array.from(observerRef.current.values())
-        const current = sections
-          .filter(e => e.boundingClientRect.top <= headerHeight + 10)
-          .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top)
+        if (sections.length === 0) return
 
-        if (current.length > 0) {
-          setActiveSection(current[current.length - 1].target.id)
-        } else if (sections.length > 0) {
-          const above = sections
-            .filter(e => e.boundingClientRect.bottom <= headerHeight + 50)
-            .sort((a, b) => b.boundingClientRect.top - a.boundingClientRect.top)
-          if (above.length > 0) {
-            setActiveSection(above[0].target.id)
-          }
-        }
+        const sorted = sections.sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top)
+        const active = sorted.find(s => s.boundingClientRect.top >= -headerHeight) ?? sorted[sorted.length - 1]
+
+        setActiveSection(active.target.id)
       },
       {
-        rootMargin: `-${headerHeight}px 0px -40% 0px`,
-        threshold: [0, 0.1, 0.5],
+        rootMargin: `-${headerHeight}px 0px 0px 0px`,
+        threshold: 0,
       }
     )
 
