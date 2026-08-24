@@ -5,7 +5,7 @@ import { ProjectMockup } from '../components/ProjectMockup'
 
 export function MainProject() {
   return (
-    <section className="border-t border-border-light dark:border-border-dark">
+    <section id="project" className="border-t border-border-light dark:border-border-dark">
       <div className="mx-auto max-w-360 px-6 py-16 md:px-11 md:py-24">
         <SectionLabel number="03" label="PROJET PRINCIPAL" />
 
