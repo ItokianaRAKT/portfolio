@@ -6,7 +6,7 @@ import { projects } from '../data/projects'
 export function Projects() {
   return (
     <section id="projects" className="border-t border-border-light dark:border-border-dark">
-      <div className="mx-auto max-w-[1440px] px-6 py-16 md:px-11 md:py-24">
+      <div className="mx-auto max-w-360 px-6 py-16 md:px-11 md:py-24">
         <SectionLabel number="04" label="AUTRES PROJETS" />
 
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-5">
