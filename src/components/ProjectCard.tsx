@@ -22,23 +22,65 @@ export function ProjectCard({ project }: ProjectCardProps) {
       className="group flex flex-col border border-border-light transition-colors duration-200 hover:border-primary-light dark:border-border-dark dark:hover:border-primary-dark"
     >
       <div className="relative aspect-[16/10] overflow-hidden bg-surface-light dark:bg-surface-dark">
-        <svg viewBox="0 0 320 200" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-full w-full">
-          <rect width="320" height="200" fill={bgColor} />
-          <rect x="60" y="20" width="200" height="120" rx="6" fill={screenColor} stroke={borderColor} strokeWidth="1" />
-          <rect x="60" y="20" width="200" height="10" rx="6" fill={bgColor} />
-          <circle cx="160" cy="25" r="2" fill={borderColor} />
-          <rect x="75" y="40" width="80" height="6" rx="2" fill={accentColor} opacity="0.8" />
-          <rect x="75" y="52" width="50" height="4" rx="1" fill={borderColor} opacity="0.5" />
-          <rect x="75" y="64" width="170" height="3" rx="1" fill={borderColor} opacity="0.3" />
-          <rect x="75" y="72" width="170" height="3" rx="1" fill={borderColor} opacity="0.3" />
-          <rect x="75" y="84" width="50" height="14" rx="3" fill={accentColor} opacity="0.9" />
-          <rect x="135" y="84" width="50" height="14" rx="3" fill={borderColor} opacity="0.3" />
-          <rect x="40" y="140" width="240" height="8" rx="4" fill={bgColor} stroke={borderColor} strokeWidth="1" />
-          <rect x="145" y="143" width="30" height="2" rx="1" fill={borderColor} opacity="0.5" />
-          <rect x="90" y="160" width="140" height="20" rx="4" fill={screenColor} stroke={borderColor} strokeWidth="0.5" />
-          <rect x="100" y="165" width="40" height="4" rx="1" fill={accentColor} opacity="0.6" />
-          <rect x="100" y="173" width="80" height="2" rx="1" fill={borderColor} opacity="0.3" />
-        </svg>
+        {project.device === 'phone' ? (
+          <svg viewBox="0 0 320 200" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-full w-full">
+            <defs>
+              {project.image && (
+                <clipPath id={`clip-card-${project.id}`}>
+                  <rect x="110" y="24" width="100" height="166" rx="6" />
+                </clipPath>
+              )}
+            </defs>
+            <rect width="320" height="200" fill={bgColor} />
+            <rect x="110" y="10" width="100" height="180" rx="14" fill={screenColor} stroke={borderColor} strokeWidth="1.5" />
+            <rect x="110" y="10" width="100" height="14" rx="14" fill={bgColor} />
+            <circle cx="160" cy="17" r="3" fill={borderColor} />
+            {project.image ? (
+              <image href={project.image} x="110" y="24" width="100" height="166" clipPath={`url(#clip-card-${project.id})`} preserveAspectRatio="xMidYMid slice" />
+            ) : (
+              <>
+                <rect x="122" y="36" width="56" height="5" rx="1.5" fill={accentColor} opacity="0.8" />
+                <rect x="122" y="46" width="36" height="3" rx="1" fill={borderColor} opacity="0.5" />
+                <rect x="122" y="56" width="76" height="2.5" rx="1" fill={borderColor} opacity="0.3" />
+                <rect x="122" y="63" width="76" height="2.5" rx="1" fill={borderColor} opacity="0.3" />
+                <rect x="122" y="74" width="36" height="10" rx="2" fill={accentColor} opacity="0.9" />
+                <rect x="164" y="74" width="36" height="10" rx="2" fill={borderColor} opacity="0.3" />
+              </>
+            )}
+            <rect x="150" y="184" width="20" height="3" rx="1.5" fill={borderColor} opacity="0.5" />
+          </svg>
+        ) : (
+          <svg viewBox="0 0 320 200" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-full w-full">
+            <defs>
+              {project.image && (
+                <clipPath id={`clip-card-${project.id}`}>
+                  <rect x="60" y="30" width="200" height="110" rx="3" />
+                </clipPath>
+              )}
+            </defs>
+            <rect width="320" height="200" fill={bgColor} />
+            <rect x="60" y="20" width="200" height="120" rx="6" fill={screenColor} stroke={borderColor} strokeWidth="1" />
+            <rect x="60" y="20" width="200" height="10" rx="6" fill={bgColor} />
+            <circle cx="160" cy="25" r="2" fill={borderColor} />
+            {project.image ? (
+              <image href={project.image} x="60" y="30" width="200" height="110" clipPath={`url(#clip-card-${project.id})`} preserveAspectRatio="xMidYMid slice" />
+            ) : (
+              <>
+                <rect x="75" y="40" width="80" height="6" rx="2" fill={accentColor} opacity="0.8" />
+                <rect x="75" y="52" width="50" height="4" rx="1" fill={borderColor} opacity="0.5" />
+                <rect x="75" y="64" width="170" height="3" rx="1" fill={borderColor} opacity="0.3" />
+                <rect x="75" y="72" width="170" height="3" rx="1" fill={borderColor} opacity="0.3" />
+                <rect x="75" y="84" width="50" height="14" rx="3" fill={accentColor} opacity="0.9" />
+                <rect x="135" y="84" width="50" height="14" rx="3" fill={borderColor} opacity="0.3" />
+              </>
+            )}
+            <rect x="40" y="140" width="240" height="8" rx="4" fill={bgColor} stroke={borderColor} strokeWidth="1" />
+            <rect x="145" y="143" width="30" height="2" rx="1" fill={borderColor} opacity="0.5" />
+            <rect x="90" y="160" width="140" height="20" rx="4" fill={screenColor} stroke={borderColor} strokeWidth="0.5" />
+            <rect x="100" y="165" width="40" height="4" rx="1" fill={accentColor} opacity="0.6" />
+            <rect x="100" y="173" width="80" height="2" rx="1" fill={borderColor} opacity="0.3" />
+          </svg>
+        )}
       </div>
 
       <div className="flex flex-1 flex-col p-4">

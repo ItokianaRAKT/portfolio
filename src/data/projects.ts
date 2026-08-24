@@ -5,6 +5,8 @@ export interface Project {
   description: string
   stack: string[]
   href?: string
+  image?: string
+  device?: 'laptop' | 'phone'
 }
 
 export const projects: Project[] = [
@@ -14,6 +16,7 @@ export const projects: Project[] = [
     title: 'CAPSULE',
     description: 'Capsules temporelles numériques.',
     stack: ['React', 'TypeScript', 'Spring Boot', 'PostgreSQL'],
+    image: '/capsule.png',
   },
   {
     id: 'sosmada',
@@ -21,6 +24,8 @@ export const projects: Project[] = [
     title: 'SOSMADA',
     description: "Informations d'urgence accessibles hors ligne.",
     stack: ['React Native', 'TypeScript', 'Expo', 'SQLite'],
+    image: '/sos_mada.png',
+    device: 'phone',
   },
   {
     id: 'exam-hub',
