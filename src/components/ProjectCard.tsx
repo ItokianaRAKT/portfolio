@@ -26,31 +26,31 @@ export function ProjectCard({ project }: ProjectCardProps) {
           <defs>
             {project.image && (
               <clipPath id={`clip-card-${project.id}`}>
-                <rect x="60" y="30" width="200" height="110" rx="3" />
+                <rect x="8" y="20" width="304" height="124" rx="4" />
               </clipPath>
             )}
           </defs>
           <rect width="320" height="200" fill={bgColor} />
-          <rect x="60" y="20" width="200" height="120" rx="6" fill={screenColor} stroke={borderColor} strokeWidth="1" />
-          <rect x="60" y="20" width="200" height="10" rx="6" fill={bgColor} />
-          <circle cx="160" cy="25" r="2" fill={borderColor} />
+          <rect x="8" y="4" width="304" height="140" rx="8" fill={screenColor} stroke={borderColor} strokeWidth="2" />
+          <rect x="8" y="4" width="304" height="16" rx="8" fill={bgColor} />
+          <circle cx="160" cy="12" r="3" fill={borderColor} />
           {project.image ? (
-            <image href={project.image} x="60" y="30" width="200" height="110" clipPath={`url(#clip-card-${project.id})`} preserveAspectRatio="xMidYMid slice" />
+            <image href={project.image} x="8" y="20" width="304" height="124" clipPath={`url(#clip-card-${project.id})`} preserveAspectRatio="xMidYMid slice" />
           ) : (
             <>
-              <rect x="75" y="40" width="80" height="6" rx="2" fill={accentColor} opacity="0.8" />
-              <rect x="75" y="52" width="50" height="4" rx="1" fill={borderColor} opacity="0.5" />
-              <rect x="75" y="64" width="170" height="3" rx="1" fill={borderColor} opacity="0.3" />
-              <rect x="75" y="72" width="170" height="3" rx="1" fill={borderColor} opacity="0.3" />
-              <rect x="75" y="84" width="50" height="14" rx="3" fill={accentColor} opacity="0.9" />
-              <rect x="135" y="84" width="50" height="14" rx="3" fill={borderColor} opacity="0.3" />
+              <rect x="24" y="32" width="120" height="8" rx="2" fill={accentColor} opacity="0.8" />
+              <rect x="24" y="46" width="75" height="5" rx="1" fill={borderColor} opacity="0.5" />
+              <rect x="24" y="60" width="264" height="4" rx="1" fill={borderColor} opacity="0.3" />
+              <rect x="24" y="70" width="264" height="4" rx="1" fill={borderColor} opacity="0.3" />
+              <rect x="24" y="86" width="75" height="18" rx="3" fill={accentColor} opacity="0.9" />
+              <rect x="110" y="86" width="75" height="18" rx="3" fill={borderColor} opacity="0.3" />
             </>
           )}
-          <rect x="40" y="140" width="240" height="8" rx="4" fill={bgColor} stroke={borderColor} strokeWidth="1" />
-          <rect x="145" y="143" width="30" height="2" rx="1" fill={borderColor} opacity="0.5" />
-          <rect x="90" y="160" width="140" height="20" rx="4" fill={screenColor} stroke={borderColor} strokeWidth="0.5" />
-          <rect x="100" y="165" width="40" height="4" rx="1" fill={accentColor} opacity="0.6" />
-          <rect x="100" y="173" width="80" height="2" rx="1" fill={borderColor} opacity="0.3" />
+          <rect x="0" y="144" width="320" height="12" rx="0" fill={bgColor} stroke={borderColor} strokeWidth="2" />
+          <rect x="130" y="148" width="60" height="3" rx="1.5" fill={borderColor} opacity="0.6" />
+          <rect x="80" y="164" width="160" height="24" rx="4" fill={screenColor} stroke={borderColor} strokeWidth="1.5" />
+          <rect x="120" y="170" width="80" height="5" rx="1" fill={accentColor} opacity="0.5" />
+          <rect x="120" y="179" width="50" height="2" rx="1" fill={borderColor} opacity="0.3" />
         </svg>
       </div>
 
