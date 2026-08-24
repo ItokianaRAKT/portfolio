@@ -17,7 +17,7 @@ export function Skills() {
           viewport={{ once: true, margin: '-100px' }}
           transition={{ duration: 0.5 }}
         >
-          <SectionLabel number="05" label="COMPÉTENCES" />
+          <SectionLabel number="05" label="COMPÉTENCES & OUTILS" />
         </motion.div>
 
         <div className="grid gap-12 md:grid-cols-[1fr_2fr] md:gap-16">

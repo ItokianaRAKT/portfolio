@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect } from 'react'
 import { Menu, X } from 'lucide-react'
 import { motion, AnimatePresence } from 'motion/react'
 import { ThemeToggle } from './ThemeToggle'
@@ -7,7 +7,7 @@ const NAV_LINKS = [
   { href: '#home', label: 'ACCUEIL' },
   { href: '#about', label: 'À PROPOS' },
   { href: '#project', label: 'PROJETS' },
-  { href: '#skills', label: 'COMPÉTENCES' },
+  { href: '#skills', label: 'COMPÉTENCES & OUTILS' },
   { href: '#contact', label: 'CONTACT' },
 ] as const
 
@@ -16,48 +16,28 @@ const SECTION_IDS = NAV_LINKS.map(link => link.href.slice(1))
 export function Navbar() {
   const [activeSection, setActiveSection] = useState('home')
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-  const observerRef = useRef<Map<string, IntersectionObserverEntry>>(new Map())
-
   useEffect(() => {
-    const headerHeight = 48
+    const handleScroll = () => {
+      const viewportHeight = window.innerHeight
 
-    const observer = new IntersectionObserver(
-      entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            observerRef.current.set(entry.target.id, entry)
-          } else {
-            observerRef.current.delete(entry.target.id)
-          }
-        })
+      let currentSection = SECTION_IDS[0]
 
-        const visible = Array.from(observerRef.current.values())
-          .filter(e => e.boundingClientRect.top <= headerHeight + 10)
-          .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top)
-
-        if (visible.length > 0) {
-          setActiveSection(visible[visible.length - 1].target.id)
-        } else if (visible.length === 0 && observerRef.current.size > 0) {
-          const above = Array.from(observerRef.current.values())
-            .filter(e => e.boundingClientRect.top <= headerHeight + 10)
-            .sort((a, b) => b.boundingClientRect.top - a.boundingClientRect.top)
-          if (above.length > 0) {
-            setActiveSection(above[0].target.id)
-          }
+      for (const id of SECTION_IDS) {
+        const el = document.getElementById(id)
+        if (!el) continue
+        const rect = el.getBoundingClientRect()
+        if (rect.top <= viewportHeight * 0.1) {
+          currentSection = id
         }
-      },
-      {
-        rootMargin: `-${headerHeight}px 0px -40% 0px`,
-        threshold: [0, 0.1, 0.5],
       }
-    )
 
-    SECTION_IDS.forEach(id => {
-      const el = document.getElementById(id)
-      if (el) observer.observe(el)
-    })
+      setActiveSection(currentSection)
+    }
 
-    return () => observer.disconnect()
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    handleScroll()
+
+    return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
   useEffect(() => {
