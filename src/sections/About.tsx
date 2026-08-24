@@ -65,7 +65,7 @@ export function About() {
             </motion.div>
           </motion.div>
 
-          <div className="flex flex-col self-center gap-2.5">
+          <div className="flex flex-col self-center ml-auto w-2/3 gap-2.5">
             {principles.map((principle, index) => (
               <motion.div
                 key={principle.id}
