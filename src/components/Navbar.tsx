@@ -31,15 +31,16 @@ export function Navbar() {
           }
         })
 
-        const visible = Array.from(observerRef.current.values())
+        const sections = Array.from(observerRef.current.values())
+        const current = sections
           .filter(e => e.boundingClientRect.top <= headerHeight + 10)
           .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top)
 
-        if (visible.length > 0) {
-          setActiveSection(visible[visible.length - 1].target.id)
-        } else if (visible.length === 0 && observerRef.current.size > 0) {
-          const above = Array.from(observerRef.current.values())
-            .filter(e => e.boundingClientRect.top <= headerHeight + 10)
+        if (current.length > 0) {
+          setActiveSection(current[current.length - 1].target.id)
+        } else if (sections.length > 0) {
+          const above = sections
+            .filter(e => e.boundingClientRect.bottom <= headerHeight + 50)
             .sort((a, b) => b.boundingClientRect.top - a.boundingClientRect.top)
           if (above.length > 0) {
             setActiveSection(above[0].target.id)
